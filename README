@@ -1,3 +1,5 @@
+Ada zpf Runtime on Arduino Due SAM3X8E
+
 startup-gen -P Blink.gpr -l src/link.ld -s src/crt0.S
 arm-eabi-objcopy -O binary blink blink.bin
 bossac -i -d  --port=COM3 -Ufalse -e -w -v -b blink.bin -R

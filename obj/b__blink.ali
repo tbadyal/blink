@@ -1,0 +1,46 @@
+V "GNAT Lib v2020"
+A -gnatA
+A --RTS=C:\gnat\2020-arm-elf\arm-eabi\lib\gnat\zfp-cortex-m3\
+A -mfloat-abi=soft
+A -gnatA
+A -gnatWb
+A -gnatiw
+A -gnatws
+A -mlittle-endian
+A -mthumb
+A -mfloat-abi=soft
+A -mcpu=cortex-m3
+A -march=armv7-m
+P ZX
+
+RN
+RR NO_EXCEPTION_PROPAGATION
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_IMPLEMENTATION_RESTRICTIONS
+RV NO_OBSOLESCENT_FEATURES
+
+U ada_main%b		b__blink.adb		19faf54a NE OO PK IL
+Z system%s		system.ads		system.ali
+
+U ada_main%s		b__blink.ads		02b53ab7 EE NE OO PK IL
+W system%s		system.ads		system.ali
+
+D b__blink.ads		20210221154958 e42e4e0a ada_main%s
+D b__blink.adb		20210221154958 fdd4bb40 ada_main%b
+D system.ads		20200819171408 e69b74bd system%s
+G a e
+G c Z s b [adainit ada_main 15 14 none]
+G c Z s b [main ada_main 18 14 none]
+X 1 b__blink.ads
+5K9*ada_main 26l5 26e13 2|7b14 38l5 38t13
+8a4*GNAT_Version{string} 10r22
+12a4*Ada_Main_Program_Name{string} 13r22 2|21r52
+15U14*adainit 16i<c,adainit>22 2|11b14 15l8 15t15 25s7
+18U14*main 19i<c,main>22 2|20b14 27t7
+X 2 b__blink.adb
+17U14 Ada_Main_Program 18b<ada,_ada_blink>24 26s7
+21m7 Ensure_Reference{3|90M9} 22r24
+X 3 system.ads
+60K9*System 1|4w6 2|21r34 3|172e11
+90M9*Address 2|21r41
+

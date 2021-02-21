@@ -1,0 +1,234 @@
+Archive member included to satisfy reference by file (symbol)
+
+libblink.a(crt0.o)            (_start)
+C:\gnat\2020-arm-elf\arm-eabi\lib\gnat\zfp-cortex-m3\adalib\libgnat.a(breakpoint_handler-cortexm.o)
+                              libblink.a(crt0.o) (__gnat_bkpt_trap)
+C:\gnat\2020-arm-elf\arm-eabi\lib\gnat\zfp-cortex-m3\adalib\libgnat.a(s-macres.o)
+                              libblink.a(crt0.o) (_exit)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+FLASH            0x0000000000080000 0x0000000000080000 xr
+SRAM             0x0000000020000000 0x0000000000018000 xrw
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+LOAD blink.o
+LOAD b__blink.o
+LOAD libblink.a
+LOAD C:\gnat\2020-arm-elf\arm-eabi\lib\gnat\zfp-cortex-m3\adalib\libgnat.a
+START GROUP
+LOAD c:/gnat/2020-arm-elf/bin/../lib/gcc/arm-eabi/9.3.1/thumb/v7-m\libgcc.a
+END GROUP
+                0x0000000000000000                __DYNAMIC = 0x0
+                0x0000000000001000                _DEFAULT_STACK_SIZE = 0x1000
+
+.text           0x0000000000080000      0x4bc
+ *(.vectors)
+ .vectors       0x0000000000080000      0x130 libblink.a(crt0.o)
+                0x0000000000080000                __vectors
+ *(.text .text.* .gnu.linkonce.t*)
+ .text          0x0000000000080130       0xb0 blink.o
+                0x0000000000080160                _ada_blink
+ .text          0x00000000000801e0       0x28 b__blink.o
+                0x00000000000801e0                adainit
+                0x00000000000801ec                main
+ *fill*         0x0000000000080208      0x1f8 
+ .text          0x0000000000080400       0x7c libblink.a(crt0.o)
+                0x0000000000080400                __gnat_irq_trap
+                0x0000000000080400                __unknown_interrupt_handler
+                0x0000000000080402                __gnat_sv_call_trap
+                0x0000000000080404                __gnat_pend_sv_trap
+                0x0000000000080406                __gnat_sys_tick_trap
+                0x000000000008040a                _start
+ .text          0x000000000008047c       0x20 C:\gnat\2020-arm-elf\arm-eabi\lib\gnat\zfp-cortex-m3\adalib\libgnat.a(breakpoint_handler-cortexm.o)
+                0x000000000008047c                __gnat_bkpt_trap
+ .text          0x000000000008049c        0x0 C:\gnat\2020-arm-elf\arm-eabi\lib\gnat\zfp-cortex-m3\adalib\libgnat.a(s-macres.o)
+ .text._exit    0x000000000008049c       0x10 C:\gnat\2020-arm-elf\arm-eabi\lib\gnat\zfp-cortex-m3\adalib\libgnat.a(s-macres.o)
+                0x000000000008049c                _exit
+ .text.abort    0x00000000000804ac        0x8 C:\gnat\2020-arm-elf\arm-eabi\lib\gnat\zfp-cortex-m3\adalib\libgnat.a(s-macres.o)
+                0x00000000000804ac                abort
+ .text.system__machine_reset__stop
+                0x00000000000804b4        0x8 C:\gnat\2020-arm-elf\arm-eabi\lib\gnat\zfp-cortex-m3\adalib\libgnat.a(s-macres.o)
+                0x00000000000804b4                system__machine_reset__stop
+ *(.gnu.warning)
+
+.glue_7         0x00000000000804bc        0x0
+ .glue_7        0x00000000000804bc        0x0 linker stubs
+
+.glue_7t        0x00000000000804bc        0x0
+ .glue_7t       0x00000000000804bc        0x0 linker stubs
+
+.vfp11_veneer   0x00000000000804bc        0x0
+ .vfp11_veneer  0x00000000000804bc        0x0 linker stubs
+
+.v4_bx          0x00000000000804bc        0x0
+ .v4_bx         0x00000000000804bc        0x0 linker stubs
+
+.iplt           0x00000000000804bc        0x0
+ .iplt          0x00000000000804bc        0x0 b__blink.o
+
+.ARM.extab
+ *(.ARM.extab* .gnu.linkonce.armextab.*)
+                0x00000000000804bc                . = ALIGN (0x4)
+                [!provide]                        PROVIDE (__exidx_start = .)
+
+.ARM.exidx
+ *(.ARM.exidx* .gnu.linkonce.armexidx.*)
+                [!provide]                        PROVIDE (__exidx_end = .)
+
+.preinit_array  0x00000000000804bc        0x0
+                [!provide]                        PROVIDE (__preinit_array_start = .)
+ *(.preinit_array*)
+                [!provide]                        PROVIDE (__preinit_array_end = .)
+
+.init_array     0x00000000000804bc        0x0
+                [!provide]                        PROVIDE (__init_array_start = .)
+ *(SORT_BY_NAME(.init_array.*))
+ *(.init_array*)
+                [!provide]                        PROVIDE (__init_array_end = .)
+
+.fini_array     0x00000000000804bc        0x0
+                [!provide]                        PROVIDE (__fini_array_start = .)
+ *(SORT_BY_NAME(.fini_array.*))
+ *(.fini_array*)
+                [!provide]                        PROVIDE (__fini_array_end = .)
+
+.rodata         0x00000000000804bc       0x38
+ *(.lit)
+ *(.rodata .rodata.* .gnu.linkonce.r*)
+ .rodata        0x00000000000804bc       0x37 b__blink.o
+                0x00000000000804bc                __gnat_version
+                0x00000000000804e8                __gnat_ada_main_program_name
+                0x00000000000804f4                . = ALIGN (0x4)
+ *fill*         0x00000000000804f3        0x1 
+                0x00000000000804f4                __rom_end = .
+                0x00000000000804f4                __data_load = LOADADDR (.data)
+
+.rel.dyn        0x00000000000804f4        0x0
+ .rel.iplt      0x00000000000804f4        0x0 b__blink.o
+
+.data           0x0000000020000000       0x2c load address 0x00000000000804f4
+                0x0000000020000000                __data_start = .
+ *(.data .data.* .gnu.linkonce.d*)
+ .data          0x0000000020000000        0x0 blink.o
+ .data          0x0000000020000000        0x2 b__blink.o
+                0x0000000020000000                ada_main_E
+ .data          0x0000000020000002        0x0 libblink.a(crt0.o)
+ *fill*         0x0000000020000002        0xe 
+ .data.argv     0x0000000020000010       0x18 libblink.a(crt0.o)
+ .data          0x0000000020000028        0x0 C:\gnat\2020-arm-elf\arm-eabi\lib\gnat\zfp-cortex-m3\adalib\libgnat.a(breakpoint_handler-cortexm.o)
+ .data          0x0000000020000028        0x0 C:\gnat\2020-arm-elf\arm-eabi\lib\gnat\zfp-cortex-m3\adalib\libgnat.a(s-macres.o)
+ .data.system__machine_reset_E
+                0x0000000020000028        0x2 C:\gnat\2020-arm-elf\arm-eabi\lib\gnat\zfp-cortex-m3\adalib\libgnat.a(s-macres.o)
+                0x0000000020000028                system__machine_reset_E
+                0x000000002000002c                . = ALIGN (0x4)
+ *fill*         0x000000002000002a        0x2 
+                0x000000002000002c                __data_end = .
+                0x000000000000000b                __data_words = ((__data_end - __data_start) >> 0x2)
+
+.igot.plt       0x000000002000002c        0x0 load address 0x0000000000080520
+ .igot.plt      0x000000002000002c        0x0 b__blink.o
+
+.bss            0x000000002000002c     0x1004 load address 0x0000000000080520
+                0x0000000020000030                . = ALIGN (0x8)
+ *fill*         0x000000002000002c        0x4 
+                0x0000000020000030                __bss_start = .
+ *(.bss .bss.*)
+ .bss           0x0000000020000030        0x0 blink.o
+ .bss           0x0000000020000030        0x0 b__blink.o
+ .bss           0x0000000020000030        0x0 libblink.a(crt0.o)
+ .bss           0x0000000020000030        0x0 C:\gnat\2020-arm-elf\arm-eabi\lib\gnat\zfp-cortex-m3\adalib\libgnat.a(breakpoint_handler-cortexm.o)
+ .bss           0x0000000020000030        0x0 C:\gnat\2020-arm-elf\arm-eabi\lib\gnat\zfp-cortex-m3\adalib\libgnat.a(s-macres.o)
+ *(COMMON)
+                0x0000000020000030                . = ALIGN (0x8)
+                0x0000000020000030                __bss_end = .
+                0x0000000020000030                __interrupt_stack_start = .
+ *(.interrupt_stacks)
+                0x0000000020000030                . = ALIGN (0x8)
+                0x0000000020000030                __interrupt_stack_end = .
+                0x0000000020000030                __stack_start = .
+                0x0000000020001030                . = (. + DEFINED (__stack_size)?__stack_size:_DEFAULT_STACK_SIZE)
+ *fill*         0x0000000020000030     0x1000 
+                0x0000000020001030                . = ALIGN (0x8)
+                0x0000000020001030                __stack_end = .
+                0x0000000020001030                _end = .
+                0x0000000020001030                __heap_start = .
+                0x0000000020018000                __heap_end = (ORIGIN (SRAM) + LENGTH (SRAM))
+                0x0000000000000000                __bss_words = ((__bss_end - __bss_start) >> 0x2)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges
+ *(.debug_aranges)
+
+.debug_pubnames
+ *(.debug_pubnames)
+
+.debug_info
+ *(.debug_info .gnu.linkonce.wi.*)
+
+.debug_abbrev
+ *(.debug_abbrev)
+
+.debug_line
+ *(.debug_line)
+
+.debug_frame
+ *(.debug_frame)
+
+.debug_str
+ *(.debug_str)
+
+.debug_loc
+ *(.debug_loc)
+
+.debug_macinfo
+ *(.debug_macinfo)
+
+.debug_pubtypes
+ *(.debug_pubtypes)
+
+.debug_ranges
+ *(.debug_ranges)
+
+.gnu.attributes
+ *(.gnu.attributes)
+
+/DISCARD/
+ *(.note.GNU-stack)
+ *(.gnu_debuglink)
+ *(.gnu.lto_*)
+OUTPUT(blink elf32-littlearm)
+LOAD linker stubs
+
+.comment        0x0000000000000000       0x3d
+ .comment       0x0000000000000000       0x3d blink.o
+                                         0x3e (size before relaxing)
+ .comment       0x000000000000003d       0x3e b__blink.o
+ .comment       0x000000000000003d       0x3e C:\gnat\2020-arm-elf\arm-eabi\lib\gnat\zfp-cortex-m3\adalib\libgnat.a(s-macres.o)
+
+.ARM.attributes
+                0x0000000000000000       0x2f
+ .ARM.attributes
+                0x0000000000000000       0x2b blink.o
+ .ARM.attributes
+                0x000000000000002b       0x2b b__blink.o
+ .ARM.attributes
+                0x0000000000000056       0x21 libblink.a(crt0.o)
+ .ARM.attributes
+                0x0000000000000077       0x21 C:\gnat\2020-arm-elf\arm-eabi\lib\gnat\zfp-cortex-m3\adalib\libgnat.a(breakpoint_handler-cortexm.o)
+ .ARM.attributes
+                0x0000000000000098       0x2b C:\gnat\2020-arm-elf\arm-eabi\lib\gnat\zfp-cortex-m3\adalib\libgnat.a(s-macres.o)

@@ -1,0 +1,18 @@
+[GENERATED OBJECT FILE]
+b__blink.o
+[PROJECT FILES]
+C:\Users\ADMIN\gpr\blink\blink.gpr
+20210221154854 e47dc98bc09528c936c233a6c575bc54
+[BOUND OBJECT FILES]
+C:\Users\ADMIN\gpr\blink\obj\blink.o
+[GENERATED SOURCE FILES]
+b__blink.ads
+b__blink.adb
+b__blink.ali
+[RESULTING OPTIONS]
+-LC:\Users\ADMIN\gpr\blink\obj\
+-LC:\Users\ADMIN\gpr\blink\obj\
+-LC:\gnat\2020-arm-elf\arm-eabi\lib\gnat\zfp-cortex-m3\adalib\
+-static
+-static-libgcc
+C:\gnat\2020-arm-elf\arm-eabi\lib\gnat\zfp-cortex-m3\adalib\libgnat.a

@@ -1,0 +1,39 @@
+V "GNAT Lib v2020"
+M P W=b
+A -gnatA
+A --RTS=C:\gnat\2020-arm-elf\arm-eabi\lib\gnat\zfp-cortex-m3\
+A -mlittle-endian
+A -mthumb
+A -mfloat-abi=soft
+A -mcpu=cortex-m3
+A -march=armv7-m
+P ZX
+
+RN
+RV NO_IMPLEMENTATION_ATTRIBUTES
+RV NO_IMPLEMENTATION_PRAGMAS
+
+U blink%b		blink.adb		1638ae97 NE OO SU IL
+W system%s		system.ads		system.ali
+
+D blink.adb		20210221154200 f0a3da2a blink%b
+D system.ads		20200819171408 e69b74bd system%s
+G a e
+G c Z b b [blink standard 3 11 none]
+X 1 blink.adb
+3U11*blink 3b11 55l5 55t10
+5M10 Word 7r20 11r23 15r25 19r27 23r16 25r26 29r27 33r39 34r21
+7m4 pb_pio_enable{5M10} 8r21 9m8 9r8 44m4
+11m4 pb_output_enable{5M10} 12r21 13m8 13r8 45m4
+15m4 pb_set_output_data{5M10} 16r21 17m8 17r8 49m8
+19m4 pb_clear_output_data{5M10} 20r21 21m8 21r8 51m17
+23m4 pb27_mask{5M10} 44r24 45r24 49r30 51r41
+25m4 timer_mode_register{5M10} 26r21 27m8 27r8 46m4
+29m4 timer_value_register{5M10} 30r21 31m8 31r8 34r29 36r14
+33U15 sleep_ms 33b15 33>24 39l8 39t16 50s17 52s17
+33m24 milliseconds{5M10} 34r52
+34m7 sleep_unitl{5M10} 36r37
+X 2 system.ads
+60K9*System 1|1w6 9r34 13r37 17r39 21r41 27r40 31r41 2|172e11
+90M9*Address 1|9r34 13r37 17r39 21r41 27r40 31r41
+

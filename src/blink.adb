@@ -30,8 +30,20 @@ begin
    RTT.MR.RTPRES := 16#00000020#;
    WDT.MR.WDDIS := True;
    PMC.PMC_PCER0.PID.Val := 16#1#;
+   PIOA.PDR.Val := 16#00000300#;
+   UART.CR.RSTRX := True;
+   UART.CR.RSTTX := True;
+   UART.CR.RXDIS := True;
+   UART.CR.TXDIS := True;
+   UART.MR.PAR := Interfaces.SAM.UART.NO;
+   UART.MR.CHMODE := Interfaces.SAM.UART.NORMAL;
+   UART.BRGR.CD := 9600;
+   UART.CR.RXEN := True;
+   UART.CR.TXEN := True;
+   
       
    loop
+      UART.THR.TXCHR := Interfaces.SAM.Byte(75);
       PIOB.SODR.val := 16#08000000#;
       sleep_ms(50);
       PIOB.CODR.val := 16#08000000#;

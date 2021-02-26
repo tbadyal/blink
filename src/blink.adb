@@ -1,55 +1,41 @@
-with system;
+with Interfaces.SAM.PIO;
+with Interfaces.SAM.SYSC;
+with Interfaces.SAM.UART;
+with Interfaces.SAM.PMC;
 
 procedure blink is   
    
-    type Word is mod 2**32;
+   use type Interfaces.SAM.UInt32;
    
-   pb_pio_enable : Word;
-   pragma Volatile (pb_pio_enable);
-   for pb_pio_enable'Address use System'To_Address(16#400E1000#);
-
-   pb_output_enable : Word;
-   pragma Volatile (pb_output_enable);
-   for pb_output_enable'Address use System'To_Address(16#400E1010#);
-
-   pb_set_output_data : Word;
-   pragma Volatile (pb_set_output_data);
-   for pb_set_output_data'Address use System'To_Address(16#400E1030#);
-
-   pb_clear_output_data : Word;
-   pragma Volatile (pb_clear_output_data);
-   for pb_clear_output_data'Address use System'To_Address(16#400E1034#);
+   PIOA : access Interfaces.SAM.PIO.PIO_Peripheral := Interfaces.SAM.PIO.PIOA_Periph'Access;
+   PIOB : access Interfaces.SAM.PIO.PIO_Peripheral := Interfaces.SAM.PIO.PIOB_Periph'Access;
+   PIOC : access Interfaces.SAM.PIO.PIO_Peripheral := Interfaces.SAM.PIO.PIOC_Periph'Access;
+   PIOD : access Interfaces.SAM.PIO.PIO_Peripheral := Interfaces.SAM.PIO.PIOD_Periph'Access;
+   RTT : access Interfaces.SAM.SYSC.RTT_Peripheral := Interfaces.SAM.SYSC.RTT_Periph'Access;
+   WDT : access Interfaces.SAM.SYSC.WDT_Peripheral := Interfaces.SAM.SYSC.WDT_Periph'Access;
+   UART : access Interfaces.SAM.UART.UART_Peripheral := Interfaces.SAM.UART.UART_Periph'Access;
+   PMC : access Interfaces.sam.PMC.PMC_Peripheral := Interfaces.SAM.PMC.PMC_Periph'Access;
    
-   pb27_mask : Word := 16#08000000#;
-   
-   timer_mode_register : Word;
-   pragma Volatile (timer_mode_register);
-   for timer_mode_register'Address use System'To_Address(16#400E1A30#);
-   
-   timer_value_register : Word;
-   pragma Volatile (timer_value_register);
-   for timer_value_register'Address use System'To_Address(16#400E1A38#);
-   
-    procedure sleep_ms(milliseconds : Word) is
-      sleep_unitl : Word := timer_value_register + milliseconds;
+   procedure sleep_ms(milliseconds : Interfaces.SAM.UInt32) is
+      sleep_unitl : Interfaces.SAM.UInt32 := RTT.VR + milliseconds;
    begin
-      while  timer_value_register < sleep_unitl loop
+      while  RTT.VR < sleep_unitl loop
          null;
       end loop;
    end sleep_ms;
-
    
 begin
-      
-   pb_pio_enable    := pb27_mask;
-   pb_output_enable := pb27_mask;
-   timer_mode_register := 16#00000020#;
+   PIOB.PER.Val := 16#08000000#;
+   PIOB.OER.Val := 16#08000000#;   
+   RTT.MR.RTPRES := 16#00000020#;
+   WDT.MR.WDDIS := True;
+   PMC.PMC_PCER0.PID.Val := 16#1#;
       
    loop
-       pb_set_output_data := pb27_mask;
-		sleep_ms(100);
-		pb_clear_output_data := pb27_mask;
-		sleep_ms(100);
-         
+      PIOB.SODR.val := 16#08000000#;
+      sleep_ms(50);
+      PIOB.CODR.val := 16#08000000#;
+      sleep_ms(50);
    end loop;
+   
 end blink;   

@@ -1,6 +1,6 @@
 V "GNAT Lib v2020"
 A -gnatA
-A --RTS=C:\gnat\2020-arm-elf\arm-eabi\lib\gnat\zfp-cortex-m3\
+A --RTS=C:\gnat\2020-arm-elf\arm-eabi\lib\gnat\ravenscar-full-sam3x\
 A -mfloat-abi=soft
 A -gnatA
 A -gnatWb
@@ -8,39 +8,93 @@ A -gnatiw
 A -gnatws
 A -mlittle-endian
 A -mthumb
-A -mfloat-abi=soft
 A -mcpu=cortex-m3
+A -mfloat-abi=soft
 A -march=armv7-m
-P ZX
+P DB ZX
 
 RN
-RR NO_EXCEPTION_PROPAGATION
+RV NO_DEFAULT_INITIALIZATION
+RV NO_IMPLEMENTATION_ATTRIBUTES
 RV NO_IMPLEMENTATION_PRAGMAS
-RV NO_IMPLEMENTATION_RESTRICTIONS
+RV NO_IMPLICIT_LOOPS
+RV NO_ELABORATION_CODE
 RV NO_OBSOLESCENT_FEATURES
 
-U ada_main%b		b__blink.adb		19faf54a NE OO PK IL
+U ada_main%b		b__blink.adb		44adf5a2 OO PK IL
 Z system%s		system.ads		system.ali
 
-U ada_main%s		b__blink.ads		02b53ab7 EE NE OO PK IL
+U ada_main%s		b__blink.ads		72edc024 EE NE OO PK IL
 W system%s		system.ads		system.ali
+W system.parameters%s	s-parame.adb		s-parame.ali
+W system.secondary_stack%s  s-secsta.adb	s-secsta.ali
 
-D b__blink.ads		20210221154958 e42e4e0a ada_main%s
-D b__blink.adb		20210221154958 fdd4bb40 ada_main%b
-D system.ads		20200819171408 e69b74bd system%s
+D b__blink.ads		20210226105236 715c2436 ada_main%s
+D b__blink.adb		20210226105236 35f1d194 ada_main%b
+D system.ads		20210225191100 db831581 system%s
+D s-parame.ads		20210225191100 8e90778f system.parameters%s
+D s-secsta.ads		20210225191058 56a2861c system.secondary_stack%s
+D s-stoele.ads		20210225191058 2dc34a04 system.storage_elements%s
 G a e
-G c Z s b [adainit ada_main 15 14 none]
-G c Z s b [main ada_main 18 14 none]
+G c Z s b [adainit ada_main 16 14 none]
+G c Z s b [adafinal ada_main 19 14 none]
+G c Z s b [main ada_main 22 14 none]
+G c Z b b [Tsec_default_sized_stacksBIP ada_main 15 4 none]
+G c Z b b [ada_main_program ada_main 119 14 none]
 X 1 b__blink.ads
-5K9*ada_main 26l5 26e13 2|7b14 38l5 38t13
-8a4*GNAT_Version{string} 10r22
-12a4*Ada_Main_Program_Name{string} 13r22 2|21r52
-15U14*adainit 16i<c,adainit>22 2|11b14 15l8 15t15 25s7
-18U14*main 19i<c,main>22 2|20b14 27t7
+6K9*ada_main 143l5 143e13 2|7b14 151l5 151t13
+9a4*GNAT_Version{string} 11r22
+13a4*Ada_Main_Program_Name{string} 14r22 2|130r52
+16U14*adainit 17i<c,adainit>22 2|38b14 117l8 117t15 135s7
+19U14*adafinal 20i<c,adafinal>22 2|22b14 36l8 36t16 137s7
+22U14*main 23i<c,main>22 2|122b14 139t7
 X 2 b__blink.adb
-17U14 Ada_Main_Program 18b<ada,_ada_blink>24 26s7
-21m7 Ensure_Reference{3|90M9} 22r24
+9i4 E058{short_integer} 9m46 9r46 112m7 112r15
+10i4 E016{short_integer} 10m46 10r46 116m7 116r15
+11i4 E103{short_integer} 11m46 11r46 115m7 115r15
+12i4 E080{short_integer} 12m46 12r46 110m7 110r15
+13i4 E101{short_integer} 13m46 13r46 114m7 114r15
+15a4 Sec_Default_Sized_Stacks(5|43R9) 103m32 103r32
+17a4 Local_Priority_Specific_Dispatching{string} 91r9
+18a4 Local_Interrupt_States{string} 94r27
+20b4 Is_Elaborated{boolean} 30r14 33m7 80r10 83m7
+23U17*s_stalib_adafinal 24b<ada,system__standard_library__adafinal>27 35s7
+26U17*Runtime_Finalize 27b<c,__gnat_runtime_finalize>25 34s7
+39i7*Main_Priority{integer} 40m25 40r25 84m7
+41i7*Time_Slice_Value{integer} 42m25 42r25 85m7
+43e7*WC_Encoding{character} 44m25 44r25 86m7
+45e7*Locking_Policy{character} 46m25 46r25 87m7
+47e7*Queuing_Policy{character} 48m25 48r25 88m7
+49e7*Task_Dispatching_Policy{character} 50m25 50r25 89m7
+51m7*Priority_Specific_Dispatching{3|80M9} 52m25 52r25 90m7
+53i7*Num_Specific_Dispatching{integer} 54m25 54r25 92m7
+55i7*Main_CPU{integer} 56m25 56r25 93m7
+57m7*Interrupt_States{3|80M9} 58m25 58r25 94m7
+59i7*Num_Interrupt_States{integer} 60m25 60r25 95m7
+61i7*Unreserve_All_Interrupts{integer} 62m25 62r25 96m7
+63i7*Detect_Blocking{integer} 64m25 64r25 97m7
+65i7*Default_Stack_Size{integer} 66m25 66r25 98m7
+67i7*Default_Secondary_Stack_Size{4|56I9} 68m25 68r25 101m7
+69m7*Bind_Env_Addr{3|80M9} 70m25 70r25
+72U17*Runtime_Initialize 72>37 73b<c,__gnat_runtime_initialize>25 105s7
+72i37 Install_Handler{integer}
+74i7*Binder_Sec_Stacks_Count{natural} 75m27 75r27 102m7
+76m7*Default_Sized_SS_Pool{3|80M9} 77m27 77r27 103m7
+119U14 Ada_Main_Program 120b<ada,_ada_blink>24 136s7
+123U17*Initialize 123>29 124b<c,__gnat_initialize>25 134s7
+123m29 Addr{3|80M9}
+126U17*Finalize 127b<c,__gnat_finalize>25 138s7
+128a7 SEH(integer) 134m19 134r19
+130m7 Ensure_Reference{3|80M9} 131r24
 X 3 system.ads
-60K9*System 1|4w6 2|21r34 3|172e11
-90M9*Address 2|21r41
+50K9*System 1|3w6 4r6 5r6 2|15r57 15r90 51r39 57r26 67r38 69r23 76r31 101r39
+. 123r36 130r34 3|164e11
+80M9*Address 2|51r46 57r33 69r30 76r38 123r43 130r41
+X 4 s-parame.ads
+49K16*Parameters 1|4w13 2|15r97 67r45 101r46 4|173e22
+56I9*Size_Type<integer> 2|67r56
+87i4*Runtime_Default_Sec_Stack_Size{56I9} 2|15r108 101r57
+X 5 s-secsta.ads
+37K16*Secondary_Stack 1|5w13 2|15r64 5|154e27
+43R9*SS_Stack 2|15r80 5|119e14
 

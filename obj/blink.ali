@@ -1,39 +1,100 @@
 V "GNAT Lib v2020"
 M P W=b
 A -gnatA
-A --RTS=C:\gnat\2020-arm-elf\arm-eabi\lib\gnat\zfp-cortex-m3\
+A --RTS=C:\gnat\2020-arm-elf\arm-eabi\lib\gnat\ravenscar-full-sam3x\
 A -mlittle-endian
 A -mthumb
-A -mfloat-abi=soft
 A -mcpu=cortex-m3
+A -mfloat-abi=soft
 A -march=armv7-m
-P ZX
+P DB ZX
 
 RN
-RV NO_IMPLEMENTATION_ATTRIBUTES
+RV NO_STANDARD_STORAGE_POOLS
 RV NO_IMPLEMENTATION_PRAGMAS
 
-U blink%b		blink.adb		1638ae97 NE OO SU IL
-W system%s		system.ads		system.ali
+U blink%b		blink.adb		c4f411ef NE OO SU IL
+W interfaces%s		interfac.ads		interfac.ali
+W interfaces.sam%s	i-sam.ads		i-sam.ali
+W interfaces.sam.pio%s	i-sam-pio.ads		i-sam-pio.ali
+W interfaces.sam.pmc%s	i-sam-pmc.ads		i-sam-pmc.ali
+W interfaces.sam.sysc%s	i-sam-sysc.ads		i-sam-sysc.ali
+W interfaces.sam.uart%s	i-sam-uart.ads		i-sam-uart.ali
 
-D blink.adb		20210221154200 f0a3da2a blink%b
-D system.ads		20200819171408 e69b74bd system%s
+D blink.adb		20210226105232 0c544b9f blink%b
+D interfac.ads		20210225191058 5ab55268 interfaces%s
+D i-sam.ads		20210225191100 3915a8ed interfaces.sam%s
+D i-sam-pio.ads		20210225191100 e6b68cc6 interfaces.sam.pio%s
+D i-sam-pmc.ads		20210225191100 264f99fb interfaces.sam.pmc%s
+D i-sam-sysc.ads	20210225191100 838b842c interfaces.sam.sysc%s
+D i-sam-uart.ads	20210225191100 8bd2cb61 interfaces.sam.uart%s
+D system.ads		20210225191100 db831581 system%s
+D s-stoele.ads		20210225191058 2dc34a04 system.storage_elements%s
+D s-unstyp.ads		20210225191058 5ecf7212 system.unsigned_types%s
 G a e
-G c Z b b [blink standard 3 11 none]
+G c Z b b [blink standard 6 11 none]
 X 1 blink.adb
-3U11*blink 3b11 55l5 55t10
-5M10 Word 7r20 11r23 15r25 19r27 23r16 25r26 29r27 33r39 34r21
-7m4 pb_pio_enable{5M10} 8r21 9m8 9r8 44m4
-11m4 pb_output_enable{5M10} 12r21 13m8 13r8 45m4
-15m4 pb_set_output_data{5M10} 16r21 17m8 17r8 49m8
-19m4 pb_clear_output_data{5M10} 20r21 21m8 21r8 51m17
-23m4 pb27_mask{5M10} 44r24 45r24 49r30 51r41
-25m4 timer_mode_register{5M10} 26r21 27m8 27r8 46m4
-29m4 timer_value_register{5M10} 30r21 31m8 31r8 34r29 36r14
-33U15 sleep_ms 33b15 33>24 39l8 39t16 50s17 52s17
-33m24 milliseconds{5M10} 34r52
-34m7 sleep_unitl{5M10} 36r37
-X 2 system.ads
-60K9*System 1|1w6 9r34 13r37 17r39 21r41 27r40 31r41 2|172e11
-90M9*Address 1|9r34 13r37 17r39 21r41 27r40 31r41
+6U11*blink 6b11 41l5 41t10
+10p4 PIOA(4|1085R9)
+11p4 PIOB(4|1085R9) 28r4 29r4 35r7 37r7
+12p4 PIOC(4|1085R9)
+13p4 PIOD(4|1085R9)
+14p4 RTT(6|1380R9) 20r46 22r14 30r4
+15p4 WDT(6|1434R9) 31r4
+16p4 UART(7|494R9)
+17p4 PMC(5|1213R9) 32r4
+19U14 sleep_ms 19b14 19>23 25l8 25t16 36s7 38s7
+19m23 milliseconds{3|22M9} 20r55
+20m7 sleep_unitl{3|22M9} 22r23
+X 2 interfac.ads
+38K9*Interfaces 1|1r6 2r6 3r6 4r6 8r13 10r18 10r55 11r18 11r55 12r18 12r55
+. 13r18 13r55 14r17 14r55 15r17 15r55 16r18 16r57 17r17 17r54 19r38 20r21
+. 2|184e15
+66M9*Unsigned_16
+74M9*Unsigned_32
+X 3 i-sam.ads
+14K20*SAM 1|1r17 2r17 3r17 4r17 8r24 10r29 10r66 11r29 11r66 12r29 12r66
+. 13r29 13r66 14r28 14r66 15r28 15r66 16r29 16r68 17r28 17r65 19r49 20r32
+. 3|127e19
+22M9*UInt32<2|74M9> 1|8r28 19r53 20r36
+23M9*UInt16<2|66M9>
+79M9*UInt30
+X 4 i-sam-pio.ads
+12K24*PIO 1|1w21 10r33 10r70 11r33 11r70 12r33 12r70 13r33 13r70 4|1237e23
+31m13*Val{3|22M9} 1|28m13
+106m13*Val{3|22M9} 1|29m13
+256m13*Val{3|22M9} 1|35m17
+281m13*Val{3|22M9} 1|37m17
+1085R9*PIO_Peripheral 1|10r37 11r37 12r37 13r37 4|1173e6
+1087r7*PER{25R9} 1|28m9
+1093r7*OER{100R9} 1|29m9
+1105r7*SODR{250R9} 1|35m12
+1107r7*CODR{275R9} 1|37m12
+1222r4*PIOA_Periph{1085R9} 1|10m74 10r74
+1226r4*PIOB_Periph{1085R9} 1|11m74 11r74
+1230r4*PIOC_Periph{1085R9} 1|12m74 12r74
+1234r4*PIOD_Periph{1085R9} 1|13m74 13r74
+X 5 i-sam-pmc.ads
+13K24*PMC 1|4w21 17r32 17r69 5|1302e23
+178m13*Val{3|79M9} 1|32m22
+196r7*PID{172R9} 1|32m18
+1213R9*PMC_Peripheral 1|17r36 5|1267e6
+1221r7*PMC_PCER0{192R9} 1|32m8
+1299r4*PMC_Periph{1213R9} 1|17m73 17r73
+X 6 i-sam-sysc.ads
+12K24*SYSC 1|2w21 14r32 14r70 15r32 15r70 6|1454e24
+513M12*RTT_MR_RTPRES_Field{3|23M9}
+518m7*RTPRES{513M12} 1|30m11
+1245b7*WDDIS{boolean} 1|31m11
+1380R9*RTT_Peripheral 1|14r37 6|1390e6
+1382r7*MR{516R9} 1|30m8
+1386m7*VR{3|22M9} 1|20r50 22r18
+1400r4*RTT_Periph{1380R9} 1|14m75 14r75
+1434R9*WDT_Peripheral 1|15r37 6|1442e6
+1438r7*MR{1235R9} 1|31m8
+1451r4*WDT_Periph{1434R9} 1|15m75 15r75
+X 7 i-sam-uart.ads
+13K24*UART 1|3w21 16r33 16r72 7|562e24
+494R9*UART_Peripheral 1|16r38 7|534e6
+559r4*UART_Periph{494R9} 1|16m77 16r77
 

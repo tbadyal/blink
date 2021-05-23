@@ -7,5 +7,10 @@ project Blink is
    for Target use "arm-eabi";
    for Runtime ("ada") use "ravenscar-full-sam3x";
 
+   package Ide is
+      for Program_Host use "COM3";
+      for Communication_Protocol use "remote";
+   end Ide;
+
 end Blink;
 

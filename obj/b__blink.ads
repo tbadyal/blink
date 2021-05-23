@@ -73,6 +73,8 @@ package ada_main is
    --  system.wch_jis%b
    --  system.wch_cnv%s
    --  system.wch_cnv%b
+   --  ada.text_io%s
+   --  ada.text_io%b
    --  system.address_image%s
    --  system.address_image%b
    --  system.traceback%s

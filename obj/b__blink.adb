@@ -6,11 +6,11 @@ pragma Suppress (Overflow_Check);
 
 package body ada_main is
 
-   E058 : Short_Integer; pragma Import (Ada, E058, "ada__tags_E");
-   E016 : Short_Integer; pragma Import (Ada, E016, "ada__exceptions_E");
-   E103 : Short_Integer; pragma Import (Ada, E103, "system__soft_links_E");
-   E080 : Short_Integer; pragma Import (Ada, E080, "system__bb__timing_events_E");
-   E101 : Short_Integer; pragma Import (Ada, E101, "system__exception_table_E");
+   E060 : Short_Integer; pragma Import (Ada, E060, "ada__tags_E");
+   E021 : Short_Integer; pragma Import (Ada, E021, "ada__exceptions_E");
+   E105 : Short_Integer; pragma Import (Ada, E105, "system__soft_links_E");
+   E082 : Short_Integer; pragma Import (Ada, E082, "system__bb__timing_events_E");
+   E103 : Short_Integer; pragma Import (Ada, E103, "system__exception_table_E");
 
    Sec_Default_Sized_Stacks : array (1 .. 1) of aliased System.Secondary_Stack.SS_Stack (System.Parameters.Runtime_Default_Sec_Stack_Size);
 
@@ -107,13 +107,13 @@ package body ada_main is
       Ada.Exceptions'Elab_Spec;
       System.Soft_Links'Elab_Spec;
       System.Bb.Timing_Events'Elab_Spec;
-      E080 := E080 + 1;
+      E082 := E082 + 1;
       Ada.Tags'Elab_Body;
-      E058 := E058 + 1;
+      E060 := E060 + 1;
       System.Exception_Table'Elab_Body;
-      E101 := E101 + 1;
       E103 := E103 + 1;
-      E016 := E016 + 1;
+      E105 := E105 + 1;
+      E021 := E021 + 1;
    end adainit;
 
    procedure Ada_Main_Program;

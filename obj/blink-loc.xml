@@ -1,170 +1,34 @@
 <?xml version="1.0"?>
 <Locations >
   <Project>
-    <vfs_file />
-    <file_marker column=" 6" line=" 4" >
+    <vfs_file>C:\Users\ADMIN\gpr\blink\blink.gpr</vfs_file>
+    <file_marker column=" 1" line=" 5" >
       <vfs_project>C:\Users\ADMIN\gpr\blink\blink.gpr</vfs_project>
       <vfs_file>C:\Users\ADMIN\gpr\blink\src\blink.adb</vfs_file>
     </file_marker>
-    <file_marker column=" 28" line=" 34" >
+    <file_marker column=" 39" line=" 8" >
       <vfs_project>C:\Users\ADMIN\gpr\blink\blink.gpr</vfs_project>
-      <vfs_file>C:\Users\ADMIN\gpr\blink\src\blink.adb</vfs_file>
+      <vfs_file>C:\Users\ADMIN\gpr\blink\blink.gpr</vfs_file>
     </file_marker>
-    <file_marker column=" 1" line=" 1" >
+    <file_marker column=" 32" line=" 468" >
       <vfs_project />
-      <vfs_file>C:\GNAT\2020-arm-elf\arm-eabi\lib\gnat\ravenscar-full-sam3x\gnat\s-crc32.ads</vfs_file>
+      <vfs_file>C:\GNAT\2020-arm-elf\arm-eabi\lib\gnat\ravenscar-full-sam3x\gnat\i-sam-uart.ads</vfs_file>
     </file_marker>
-    <file_marker column=" 28" line=" 34" >
-      <vfs_project>C:\Users\ADMIN\gpr\blink\blink.gpr</vfs_project>
-      <vfs_file>C:\Users\ADMIN\gpr\blink\src\blink.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project />
-      <vfs_file>C:\GNAT\2020-arm-elf\arm-eabi\lib\gnat\ravenscar-full-sam3x\gnat\s-sam3x.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 4" line=" 149" >
+    <file_marker column=" 21" line=" 73" >
       <vfs_project />
       <vfs_file>C:\GNAT\2020-arm-elf\arm-eabi\lib\gnat\ravenscar-full-sam3x\gnat\s-sam3x.ads</vfs_file>
     </file_marker>
     <file_marker column=" 1" line=" 1" >
       <vfs_project />
-      <vfs_file>C:\GNAT\2020-arm-elf\arm-eabi\lib\gnat\ravenscar-full-sam3x\gnat\i-cobol.ads</vfs_file>
+      <vfs_file>C:\GNAT\2020-arm-elf\arm-eabi\lib\gnat\ravenscar-full-sam3x\gnat\i-sam-matrix.ads</vfs_file>
     </file_marker>
-    <file_marker column=" 4" line=" 149" >
+    <file_marker column=" 28" line=" 50" >
       <vfs_project />
-      <vfs_file>C:\GNAT\2020-arm-elf\arm-eabi\lib\gnat\ravenscar-full-sam3x\gnat\s-sam3x.ads</vfs_file>
+      <vfs_file>C:\GNAT\2020-arm-elf\arm-eabi\lib\gnat\ravenscar-full-sam3x\gnarl\s-osinte.ads</vfs_file>
     </file_marker>
-    <file_marker column=" 1" line=" 1" >
+    <file_marker current="true" column=" 49" line=" 48" >
       <vfs_project />
-      <vfs_file>C:\GNAT\2020-arm-elf\arm-eabi\lib\gnat\ravenscar-full-sam3x\gnat\i-sam-pio.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 9" line=" 12" >
-      <vfs_project />
-      <vfs_file>C:\GNAT\2020-arm-elf\arm-eabi\lib\gnat\ravenscar-full-sam3x\gnat\i-sam-pio.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 9" line=" 596" >
-      <vfs_project />
-      <vfs_file>C:\GNAT\2020-arm-elf\arm-eabi\lib\gnat\ravenscar-full-sam3x\gnat\i-sam-pio.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 9" line=" 792" >
-      <vfs_project />
-      <vfs_file>C:\GNAT\2020-arm-elf\arm-eabi\lib\gnat\ravenscar-full-sam3x\gnat\i-sam-pio.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 9" line=" 788" >
-      <vfs_project />
-      <vfs_file>C:\GNAT\2020-arm-elf\arm-eabi\lib\gnat\ravenscar-full-sam3x\gnat\i-sam-pio.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 9" line=" 842" >
-      <vfs_project />
-      <vfs_file>C:\GNAT\2020-arm-elf\arm-eabi\lib\gnat\ravenscar-full-sam3x\gnat\i-sam-pio.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 9" line=" 646" >
-      <vfs_project />
-      <vfs_file>C:\GNAT\2020-arm-elf\arm-eabi\lib\gnat\ravenscar-full-sam3x\gnat\i-sam-pio.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 9" line=" 942" >
-      <vfs_project />
-      <vfs_file>C:\GNAT\2020-arm-elf\arm-eabi\lib\gnat\ravenscar-full-sam3x\gnat\i-sam-pio.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 9" line=" 1085" >
-      <vfs_project />
-      <vfs_file>C:\GNAT\2020-arm-elf\arm-eabi\lib\gnat\ravenscar-full-sam3x\gnat\i-sam-pio.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 24" line=" 1087" >
-      <vfs_project />
-      <vfs_file>C:\GNAT\2020-arm-elf\arm-eabi\lib\gnat\ravenscar-full-sam3x\gnat\i-sam-pio.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 9" line=" 25" >
-      <vfs_project>C:\Users\ADMIN\gpr\blink\blink.gpr</vfs_project>
-      <vfs_file>C:\GNAT\2020-arm-elf\arm-eabi\lib\gnat\ravenscar-full-sam3x\gnat\i-sam-pio.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 41" line=" 31" >
-      <vfs_project />
-      <vfs_file>C:\GNAT\2020-arm-elf\arm-eabi\lib\gnat\ravenscar-full-sam3x\gnat\i-sam-pio.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project />
-      <vfs_file>C:\GNAT\2020-arm-elf\arm-eabi\lib\gnat\ravenscar-full-sam3x\gnat\i-sam.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 19" line=" 34" >
-      <vfs_project />
-      <vfs_file>C:\GNAT\2020-arm-elf\arm-eabi\lib\gnat\ravenscar-full-sam3x\gnat\i-sam-pio.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 9" line=" 21" >
-      <vfs_project>C:\Users\ADMIN\gpr\blink\blink.gpr</vfs_project>
-      <vfs_file>C:\GNAT\2020-arm-elf\arm-eabi\lib\gnat\ravenscar-full-sam3x\gnat\i-sam-pio.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 35" line=" 39" >
-      <vfs_project>C:\Users\ADMIN\gpr\blink\blink.gpr</vfs_project>
-      <vfs_file>C:\Users\ADMIN\gpr\blink\src\blink.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 4" line=" 28" >
-      <vfs_project>C:\Users\ADMIN\gpr\blink\blink.gpr</vfs_project>
-      <vfs_file>C:\Users\ADMIN\gpr\blink\src\blink.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 35" line=" 39" >
-      <vfs_project>C:\Users\ADMIN\gpr\blink\blink.gpr</vfs_project>
-      <vfs_file>C:\Users\ADMIN\gpr\blink\src\blink.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 4" line=" 28" >
-      <vfs_project>C:\Users\ADMIN\gpr\blink\blink.gpr</vfs_project>
-      <vfs_file>C:\Users\ADMIN\gpr\blink\src\blink.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 35" line=" 39" >
-      <vfs_project>C:\Users\ADMIN\gpr\blink\blink.gpr</vfs_project>
-      <vfs_file>C:\Users\ADMIN\gpr\blink\src\blink.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 4" line=" 28" >
-      <vfs_project>C:\Users\ADMIN\gpr\blink\blink.gpr</vfs_project>
-      <vfs_file>C:\Users\ADMIN\gpr\blink\src\blink.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 35" line=" 39" >
-      <vfs_project>C:\Users\ADMIN\gpr\blink\blink.gpr</vfs_project>
-      <vfs_file>C:\Users\ADMIN\gpr\blink\src\blink.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 4" line=" 28" >
-      <vfs_project>C:\Users\ADMIN\gpr\blink\blink.gpr</vfs_project>
-      <vfs_file>C:\Users\ADMIN\gpr\blink\src\blink.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 35" line=" 39" >
-      <vfs_project>C:\Users\ADMIN\gpr\blink\blink.gpr</vfs_project>
-      <vfs_file>C:\Users\ADMIN\gpr\blink\src\blink.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 4" line=" 28" >
-      <vfs_project>C:\Users\ADMIN\gpr\blink\blink.gpr</vfs_project>
-      <vfs_file>C:\Users\ADMIN\gpr\blink\src\blink.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 35" line=" 39" >
-      <vfs_project>C:\Users\ADMIN\gpr\blink\blink.gpr</vfs_project>
-      <vfs_file>C:\Users\ADMIN\gpr\blink\src\blink.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 4" line=" 28" >
-      <vfs_project>C:\Users\ADMIN\gpr\blink\blink.gpr</vfs_project>
-      <vfs_file>C:\Users\ADMIN\gpr\blink\src\blink.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 35" line=" 39" >
-      <vfs_project>C:\Users\ADMIN\gpr\blink\blink.gpr</vfs_project>
-      <vfs_file>C:\Users\ADMIN\gpr\blink\src\blink.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 4" line=" 28" >
-      <vfs_project>C:\Users\ADMIN\gpr\blink\blink.gpr</vfs_project>
-      <vfs_file>C:\Users\ADMIN\gpr\blink\src\blink.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 35" line=" 39" >
-      <vfs_project>C:\Users\ADMIN\gpr\blink\blink.gpr</vfs_project>
-      <vfs_file>C:\Users\ADMIN\gpr\blink\src\blink.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 4" line=" 28" >
-      <vfs_project>C:\Users\ADMIN\gpr\blink\blink.gpr</vfs_project>
-      <vfs_file>C:\Users\ADMIN\gpr\blink\src\blink.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 24" line=" 1087" >
-      <vfs_project />
-      <vfs_file>C:\GNAT\2020-arm-elf\arm-eabi\lib\gnat\ravenscar-full-sam3x\gnat\i-sam-pio.ads</vfs_file>
-    </file_marker>
-    <file_marker current="true" column=" 9" line=" 25" >
-      <vfs_project>C:\Users\ADMIN\gpr\blink\blink.gpr</vfs_project>
-      <vfs_file>C:\GNAT\2020-arm-elf\arm-eabi\lib\gnat\ravenscar-full-sam3x\gnat\i-sam-pio.ads</vfs_file>
+      <vfs_file>C:\GNAT\2020-arm-elf\arm-eabi\lib\gnat\ravenscar-full-sam3x\gnarl\s-bbinte.ads</vfs_file>
     </file_marker>
   </Project>
 </Locations>

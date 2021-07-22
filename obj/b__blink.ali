@@ -21,7 +21,7 @@ RV NO_IMPLICIT_LOOPS
 RV NO_ELABORATION_CODE
 RV NO_OBSOLESCENT_FEATURES
 
-U ada_main%b		b__blink.adb		32878f70 OO PK IL
+U ada_main%b		b__blink.adb		98967b79 OO PK IL
 Z system%s		system.ads		system.ali
 
 U ada_main%s		b__blink.ads		72edc024 EE NE OO PK IL
@@ -29,8 +29,8 @@ W system%s		system.ads		system.ali
 W system.parameters%s	s-parame.adb		s-parame.ali
 W system.secondary_stack%s  s-secsta.adb	s-secsta.ali
 
-D b__blink.ads		20210523074210 715c2436 ada_main%s
-D b__blink.adb		20210523074210 43dbab46 ada_main%b
+D b__blink.ads		20210710122830 715c2436 ada_main%s
+D b__blink.adb		20210710122830 e9ca5f4f ada_main%b
 D system.ads		20210225191100 db831581 system%s
 D s-parame.ads		20210225191100 8e90778f system.parameters%s
 D s-secsta.ads		20210225191058 56a2861c system.secondary_stack%s
@@ -42,18 +42,18 @@ G c Z s b [main ada_main 22 14 none]
 G c Z b b [Tsec_default_sized_stacksBIP ada_main 15 4 none]
 G c Z b b [ada_main_program ada_main 119 14 none]
 X 1 b__blink.ads
-6K9*ada_main 145l5 145e13 2|7b14 151l5 151t13
+6K9*ada_main 144l5 144e13 2|7b14 151l5 151t13
 9a4*GNAT_Version{string} 11r22
 13a4*Ada_Main_Program_Name{string} 14r22 2|130r52
 16U14*adainit 17i<c,adainit>22 2|38b14 117l8 117t15 135s7
 19U14*adafinal 20i<c,adafinal>22 2|22b14 36l8 36t16 137s7
 22U14*main 23i<c,main>22 2|122b14 139t7
 X 2 b__blink.adb
-9i4 E060{short_integer} 9m46 9r46 112m7 112r15
-10i4 E021{short_integer} 10m46 10r46 116m7 116r15
-11i4 E105{short_integer} 11m46 11r46 115m7 115r15
-12i4 E082{short_integer} 12m46 12r46 110m7 110r15
-13i4 E103{short_integer} 13m46 13r46 114m7 114r15
+9i4 E059{short_integer} 9m46 9r46 112m7 112r15
+10i4 E017{short_integer} 10m46 10r46 116m7 116r15
+11i4 E104{short_integer} 11m46 11r46 115m7 115r15
+12i4 E081{short_integer} 12m46 12r46 110m7 110r15
+13i4 E102{short_integer} 13m46 13r46 114m7 114r15
 15a4 Sec_Default_Sized_Stacks(5|43R9) 103m32 103r32
 17a4 Local_Priority_Specific_Dispatching{string} 91r9
 18a4 Local_Interrupt_States{string} 94r27

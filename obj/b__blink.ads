@@ -64,6 +64,7 @@ package ada_main is
    --  system.traceback_entries%s
    --  system.traceback_entries%b
    --  system.unsigned_types%s
+   --  interfaces.sam.nvic%s
    --  interfaces.sam.pio%s
    --  interfaces.sam.pmc%s
    --  interfaces.sam.sysc%s
@@ -73,8 +74,6 @@ package ada_main is
    --  system.wch_jis%b
    --  system.wch_cnv%s
    --  system.wch_cnv%b
-   --  ada.text_io%s
-   --  ada.text_io%b
    --  system.address_image%s
    --  system.address_image%b
    --  system.traceback%s

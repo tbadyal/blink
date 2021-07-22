@@ -2,6 +2,7 @@ with Interfaces.SAM.PIO;
 with Interfaces.SAM.SYSC;
 with Interfaces.SAM.UART;
 with Interfaces.SAM.PMC;
+with Interfaces.SAM.NVIC;
 
 procedure blink is   
    
@@ -14,7 +15,8 @@ procedure blink is
    RTT  : access Interfaces.SAM.SYSC.RTT_Peripheral  := Interfaces.SAM.SYSC.RTT_Periph'Access;
    WDT  : access Interfaces.SAM.SYSC.WDT_Peripheral  := Interfaces.SAM.SYSC.WDT_Periph'Access;
    UART : access Interfaces.SAM.UART.UART_Peripheral := Interfaces.SAM.UART.UART_Periph'Access;
-   PMC  : access Interfaces.sam.PMC.PMC_Peripheral   := Interfaces.SAM.PMC.PMC_Periph'Access;
+   PMC  : access Interfaces.SAM.PMC.PMC_Peripheral   := Interfaces.SAM.PMC.PMC_Periph'Access;
+   NVIC : access Interfaces.SAM.NVIC.NVIC_Peripheral := Interfaces.SAM.NVIC.NVIC_Periph'Access;
    
    procedure sleep_ms(milliseconds : Interfaces.SAM.UInt32) is
       sleep_unitl : Interfaces.SAM.UInt32 := RTT.VR + milliseconds;
@@ -55,6 +57,7 @@ begin
    UART.CR.RXEN := True;
    UART.CR.TXEN := True;
    
+   NVIC.NVICISER0 := Interfaces.SAM.Shift_Left(1,8);
    
    loop
       while not UART.SR.TXRDY loop

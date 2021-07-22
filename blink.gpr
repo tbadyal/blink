@@ -9,8 +9,14 @@ project Blink is
 
    package Ide is
       for Program_Host use "COM3";
-      for Communication_Protocol use "remote";
+      for Communication_Protocol use "extended-remote";
+      for Connection_Config_File use "src/config.cfg";
+      for Connection_Tool use "openocd";
    end Ide;
+
+   package Emulator is
+      for Board use "";
+   end Emulator;
 
 end Blink;
 
